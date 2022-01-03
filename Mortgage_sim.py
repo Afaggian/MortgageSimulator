@@ -1,5 +1,8 @@
 from decimal import Decimal
 
+money = Decimal(input("How much $ did you borrow? "))
+interest = Decimal(input("What is your interest rate per year? "))
+
 def mortgage_sim(principal, interest_rate, years=30, payments_per_year=52):
     p = principal
     n = years * payments_per_year
@@ -19,7 +22,10 @@ def mortgage_sim(principal, interest_rate, years=30, payments_per_year=52):
             break
         num += 1
 
-mortgage_sim(472_000, interest_rate=2.29)
+mortgage_sim(money, interest)
+
+if money > 500000:
+    print("That's a lot of money!!")
 
 
 
